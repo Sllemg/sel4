@@ -1,0 +1,11 @@
+import json
+import random
+import csv
+from web3 import Web3
+import requests
+from loguru import logger
+import time
+from tqdm import tqdm
+from eth_abi import encode
+def check_status_tx(address, w3, tx_hash):
+    logger.info(f'{address} - жду подтверждения транзакции  https://bscscan.com/tx/{w3.to_hex(tx_hash)}...')
